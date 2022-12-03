@@ -1,0 +1,21 @@
+class Alumno:
+
+    def __init__(self):
+        self.nombre=input("Ingrese el nombre del alumno:")
+        self.nota=float(input("Ingrese la nota:"))
+
+    def imprimir(self):
+        print("Nombre:",self.nombre)
+        print("Nota:",self.nota)
+
+    def estudiante_alumno(self):
+        if self.nota >=3:
+            print("el estudiante aprobo")
+        else:
+            print("el estudiante reprobo")
+
+
+# bloque principal
+alumno1=Alumno()
+alumno1.imprimir()
+alumno1.estudiante_alumno()

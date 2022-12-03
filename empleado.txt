@@ -1,0 +1,36 @@
+class persona:
+    def __init__(self):
+        self.nombre=input("ingrese el nombre: ")
+        self.edad=int(input("ingrese la edad: "))
+
+    def mostrar(self):
+        print("nombre: ",self.nombre)
+        print("edad: ", self.edad)
+
+class Empleado(persona):
+    def __init__(self):
+        super().__init__()
+        self.sueldo=float(input("ingrese el sueldo: "))
+
+    def mostrar(self):
+        super().mostrar()
+        print("sueldo: ",self.sueldo)
+
+    def pagar_impuestos(self):
+        if self.sueldo > 2300000:
+            print("El empleado debe pagar.")
+        else:
+            print("El empleado no paga impuestos.")
+    def descuento (self):
+
+        if self.descuento >3600000:
+            print("descuento a su sueldo es de: ")
+            print((self.sueldo*3.5)/100)
+            print("saldo total:")
+            print(self.sueldo-(self.sueldo*3.5)/100)
+
+
+empleado1=Empleado()
+empleado1.mostrar()
+empleado1.pagar_impuestos()
+empleado1.descuento()
